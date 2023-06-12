@@ -99,5 +99,5 @@ function validatePhone(phone) {
 }
 
 function validateURL(url) {
-  return /^https?:\/\/(www\.)?[\w-]+(\.[\w-]+)+$/.test(url);
+  return /^https?:\/\//.test(url);
 }
