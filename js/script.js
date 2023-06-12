@@ -82,26 +82,22 @@ function validateForm(event) {
   }
 }
 
-function validateEmail(email) {
-
-  const atIndex = email.indexOf('@');
-  const dotIndex = email.lastIndexOf('.');
-  return atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1;
+function validateEmail(correo) {
+  const indiceArroba = correo.indexOf('@');
+  const indicePunto = correo.lastIndexOf('.');
+  return indiceArroba > 0 && indicePunto > indiceArroba + 1 && indicePunto < correo.length - 1;
 }
 
-function validatePassword(password) {
-
-  const hasLetter = /[a-zA-Z]/.test(password);
-  const hasDigit = /\d/.test(password);
-  return password.length >= 3 && password.length <= 6 && hasLetter && hasDigit;
+function validatePassword(contrasena) {
+  const tieneLetra = /[a-zA-Z]/.test(contrasena);
+  const tieneDigito = /\d/.test(contrasena);
+  return contrasena.length >= 3 && contrasena.length <= 6 && tieneLetra && tieneDigito;
 }
 
-function validatePhone(phone) {
-
-  return /^\d+$/.test(phone);
+function validatePhone(telefono) {
+  return /^\+\d+$/.test(telefono);
 }
 
 function validateURL(url) {
-  
-  return /^https?:\/\//.test(url);
+  return /^https?:\/\/(www\.)?[\w-]+(\.[\w-]+)+$/.test(url);
 }
