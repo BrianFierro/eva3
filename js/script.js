@@ -95,7 +95,7 @@ function validatePassword(contrasena) {
 }
 
 function validatePhone(telefono) {
-  return /^\+\d+$/.test(telefono);
+  return phone.length === 9 && ["9"].includes(phone.charAt(0));
 }
 
 function validateURL(url) {
