@@ -94,7 +94,7 @@ function validatePassword(contrasena) {
   return contrasena.length >= 3 && contrasena.length <= 6 && tieneLetra && tieneDigito;
 }
 
-function validatePhone(telefono) {
+function validatePhone(phone) {
   return phone.length === 9 && ["9"].includes(phone.charAt(0));
 }
 
